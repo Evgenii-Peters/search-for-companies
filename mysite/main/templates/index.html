@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Название фирмы</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <div style="margin-top:20px"><label>ИНН</label>
+       {{ form.inn }}<br></div>
+        <div style="margin-top:20px"><label>ОГРН</label>
+        {{ form.ogrn }}<br></div>
+        <div style="margin-top:20px"><label>Адрес</label>
+       {{ form.address }}<br></div>
+        <div style="margin-top:20px"> <label>Название</label>
+        {{ form.name }}<br></div>
+        <button style="margin-top:20px" type="submit" name="saveFormBtn"  class="btn btn-succes">Отправить</button><br>
+        <button style="margin-top:20px" type="submit" name="fillFormBtn" class="btn btn-succes">Заполнить данные</button>
+    </form>
+</body>
+</html>
